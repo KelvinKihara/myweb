@@ -22,12 +22,30 @@ console.log(number2);
 
 // Assignment Operators
 // Assignment operators assign values to JavaScript variables. 
+
+// Given that x=10 and y=5
 // =
-// +=
+
+// += 
+x+=y
+// same as x=x+y
+
 // -=
+x-=y 
+// same as x=x-y
+
 // *=
+x*=y
+// same as x=x*y
+
 // /=
+x/=y
+// same as x=x/y
+
 // %=
+x%=y
+// same as x=x%y
+
 
 let number = 10; 
 number = number + 5;
@@ -47,13 +65,45 @@ let k = 100 + 50 * 3;
 
 console.log(k);
 // // Comparison Operators
-// Comparison operators are used in logical statements to determine equality or difference between variables
+// Comparison operators are used in logical statements to determine equality or difference between variablesx==8 is false
 // or values.
 
+// Given that x=5
 
+// ==  equal to
+x==8 
+// is false 
+
+// === is exactly equal to (value and type) 
+x===5 
+// is true
+
+x==="5" 
+// is false
+
+// != is not equal
+!(x==y)
+// is not equal
+
+// > is greater than 
+// < is less than
+// >= is greater than or equal to 
+// <= is less than or equal to 
 
 
 // // Logical Operators
-// && // AND
-// || // OR
-// !  // NOT
+
+// Given that x=6 and y=3
+
+// && // AND 
+(x < 10 && y > 1) 
+// is true
+
+// || // OR 
+(x==5 || y==5) 
+// is false
+
+// !  // NOT 
+!(x==y) 
+// is true
+

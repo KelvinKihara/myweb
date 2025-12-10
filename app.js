@@ -5,11 +5,29 @@
 // // template string
 // console.log(`My name is ${myName} and I am ${myAge} years old. My hobby is ${myHobby}.`);
 
-let age = 25; // use of initialization
-console.log(`current age: ${age}`);
+// age += 25
 
-age = age + 10;
-console.log(`age in 10 years: ${age}`);
+
+// let age = 25; // use of initialization
+// console.log(`current age: ${age}`);
+
+// age = age + 10;
+// console.log(`age in 10 years: ${age}`);
+
+let age = 25;
+// age = age + 10;
+
+age += 10;
+console.log(age);
+
+age -= 5;
+console.log(age);
+
+age *= 2;
+console.log(age);
+
+age /= 5;
+console.log(age);
 
 let name = "Kelvin"; 
 console.log(`My name is ${name}.`);
@@ -27,6 +45,6 @@ console.log(` 10 years, the year will be ${year + 10}.`);
 
 // ageafter10yrs = 30; // re-assignment
 
-var a = 3;
-a -= 1;
-console.log(a);
+// var a = 3;
+// a -= 1;
+// console.log(a);
