@@ -21,7 +21,7 @@
 
 
 // loop inside a loop
-// i++ to increase the value and prevent from reapeation
+// i++ to increase the value  till 6and prevent from reapeation
 // for (let i = 1; i <= 5; i++) {
 //   console.log(i);
 
@@ -35,8 +35,41 @@
   // code block to be executed
 // }
 
-let i = 0;
-while (i < 10) {
-  console.log(i);
-  i++;
-}
+// let i = 0;
+// while (i < 10) {
+//   console.log(i);
+//   i++;
+
+// }
+
+
+// do..while loop - is similar to the while loop, except that the code block is executed at least once
+
+// let i = 1;
+// do {
+//   console.log("hello " + i);
+//   i++;
+// // } while (condition);
+// } while (i <= 5);
+
+// break/continue statements
+// The break statement is used to exit a loop or a switch statement before it has completed its normal
+// execution.
+
+// for (let i = 1; i <= 5; i++) {
+
+//     if (i === 3) {
+//     break;
+// }
+// console.log(i);
+// }
+
+
+
+// for (let i = 1; i <= 5; i++) {
+
+//     if (i === 3) {
+//     continue;
+// }
+// console.log(i);
+// }
