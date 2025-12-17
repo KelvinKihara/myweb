@@ -53,7 +53,16 @@ function fizzBuzz(n) {
         console.log(n);
     }
 }
-fizzBuzz(n);
+fizzBuzz(15);
 
 // leap year checker 
 function isLeapYear(year) {
+    if ((year % 4 == 0 && year % 100 == 0)) {
+        console.log("is a leap year: " + true);      
+    }
+    else {
+        console.log("is a leap year: " + false);
+    }
+}
+
+isLeapYear(2007);

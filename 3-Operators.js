@@ -103,7 +103,7 @@ console.log(age >= 18 && age <= 35 && "you are an adult");
 console.log(age >= 18 && age <= 35 && "you are among the youth");
 // false bcz age >=18 is false and && returns first falsy value
 console.log(age >= 18 && age <= 35 || "you are not among the youth");
-// false bcz age >=18 is false and && returns first falsy value then || returns last truthy value
+// false bcz age >=18 is false and && retzurns first falsy value then || returns last truthy value
 
 
 // // Logical Operators
