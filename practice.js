@@ -5,12 +5,24 @@ function greet(name) {
 greet("Alice");
 
 // sum of 2 numbers
+// a and b are parameters (inputs), but they are not used
+
+
 function add(a, b) {
-    return 3 + 5;
+    return a + b;
 }
 
-add(3, 5);
 console.log(add(3, 5));
+// flow of execution
+// code first sees where the function is being called
+// then jumps to the add function
+// then assigns the argument to the parameters a =3, b=5
+// it then runs the code inside the function body (return 3 + 5;)
+// it calculates 3 + 5 = 8
+// the return sends the value 8 back to where the function was called
+// and add(3, 5) is replaced with 8
+// finally console.log(8) is executed and 8 is printed to the console
+
 
 // even and odd checker
 
@@ -23,6 +35,8 @@ function checkEvenOdd(n) {
 }
 
 checkEvenOdd(7)
+// when the fuction is called in the last line 
+ 
 
 // calc area of a rect
 function areaOfRectangle(length, width) {
@@ -49,20 +63,41 @@ function fizzBuzz(n) {
         console.log("Fizz");
     } else if (n % 5 == 0) {
         console.log("Buzz");
+        // Runs when none of the above are true
     } else {
         console.log(n);
     }
 }
 fizzBuzz(15);
 
-// leap year checker 
+// leap year checker
+// divisible by 4
+// NOT divisible by 100, unless it is also divisible by 400
 function isLeapYear(year) {
-    if ((year % 4 == 0 && year % 100 == 0)) {
+    if ((year % 4 == 0 && year % 100 !== 0) || year % 400 === 0) {
         console.log("is a leap year: " + true);      
     }
     else {
-        console.log("is a leap year: " + false);
+        console.log("is not aleap year: " + false);
     }
 }
 
-isLeapYear(2007);
+isLeapYear(2000);
+
+function addTwoNumbers(x, y) {
+    const sum = x + y;
+    return sum;
+
+}
+
+// let num = addTwoNumbers(5, 10);
+
+// let num = addTwoNumbers(7, 3);
+// function addTwoNumbers(x, y) {
+//     const sum = x + y;
+//     return sum;
+// }
+
+
+// console.log(num);
+
