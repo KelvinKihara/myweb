@@ -143,31 +143,71 @@
 
 // console.log(text);
 
-let prices = [100, 200, 300];
+// let prices = [300, 200, 100];
 
-let maxprice
+// let highestPrice = prices[0];
+// let lowestPrice = prices[0];
 
-// for (let i = 0; i < prices.length; i++) {
+// for (let i = 1; i < prices.length; i++) {
+//   // starting from the second item, since we already used the first one
+//   if (prices[i] > highestPrice) {
+//     // 200 > 100
+//     // check if this condition is true 
 
-if (prices[0] < prices[1]) {
+//     highestPrice = prices[i];
+//     // the code inside this block will execute if the condition is true
+//   }
+
+//   if (prices[i] < lowestPrice) {
+//     // 200 < 100 
+//     // condition is false
+    
+//     lowestPrice = prices[i];
+//         // so the code inside is skipped
+
+//   }
+// }
+
+// console.log("Highest price: " + highestPrice);
+// console.log("Lowest price: " + lowestPrice);
+
+let products = [
+  { name: "Laptop", price: 300 },
+  { name: "Mouse", price: 100 },
+  { name: "Keyboard", price: 200 }
+];
+// product is the object 
+// name is the property
+// price is the value
+
+let highestPrice = products[0].price;
+let lowestPrice = products[0].price;
+
+let highestPricedProduct = products[0];
+let lowestPricedProduct = products[0];
+
+// Initial guess - Highest: Laptop at $300
+// Initial guess - Lowest: Laptop at $300
+
+for (let i = 1; i < products.length; i++) {
   
-  maxprice = prices[0];     
-  prices[0] = prices[1];     
-  prices[1] = maxprice; 
+  // Get the current product we're looking at
+  let currentProduct = products[i];
 
-if (prices[0] < prices[2]) {
-  maxprice = prices[0];
-  prices[0] = prices[2];
-  prices[2] = maxprice;
+  // Check if the current product's price is higher than our highest so far
+  if (currentProduct.price > highestPrice) {
+    highestPrice = currentProduct.price;
+    highestPricedProduct = currentProduct; // Update the product itself
+  }
+
+  // Check if the current product's price is lower than our lowest so far
+  if (currentProduct.price < lowestPrice) {
+    lowestPrice = currentProduct.price;
+    lowestPricedProduct = currentProduct; // Update the product itself
+  }
 }
 
-if (prices[1] < prices[2]) {
-  maxprice = prices[1];
-  prices[1] = prices[2];
-  prices[2] = maxprice;
-}
 
-
-}
-console.log("most expensive: " + prices);
+console.log("Highest priced item:", highestPricedProduct.name, "at $" + highestPrice);
+console.log("Lowest priced item:", lowestPricedProduct.name, "at $" + lowestPrice);
 
