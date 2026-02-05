@@ -171,43 +171,114 @@
 // console.log("Highest price: " + highestPrice);
 // console.log("Lowest price: " + lowestPrice);
 
-let products = [
-  { name: "Laptop", price: 300 },
-  { name: "Mouse", price: 100 },
-  { name: "Keyboard", price: 200 }
-];
-// product is the object 
-// name is the property
-// price is the value
+// let products = [
+//   { name: "Laptop", price: 300 },
+//   { name: "Mouse", price: 100 },
+//   { name: "Keyboard", price: 200 }
+// ];
+// // product is the object 
+// // name is the property
+// // price is the value
 
-let highestPrice = products[0].price;
-let lowestPrice = products[0].price;
+// let highestPrice = products[0].price;
+// let lowestPrice = products[0].price;
 
-let highestPricedProduct = products[0];
-let lowestPricedProduct = products[0];
+// let highestPricedProduct = products[0];
+// let lowestPricedProduct = products[0];
 
-// Initial guess - Highest: Laptop at $300
-// Initial guess - Lowest: Laptop at $300
+// // Initial guess - Highest: Laptop at $300
+// // Initial guess - Lowest: Laptop at $300
 
-for (let i = 1; i < products.length; i++) {
+// for (let i = 1; i < products.length; i++) {
   
-  // Get the current product we're looking at
-  let currentProduct = products[i];
+//   // Get the current product we're looking at
+//   let currentProduct = products[i];
 
-  // Check if the current product's price is higher than our highest so far
-  if (currentProduct.price > highestPrice) {
-    highestPrice = currentProduct.price;
-    highestPricedProduct = currentProduct; // Update the product itself
-  }
+//   // Check if the current product's price is higher than our highest so far
+//   if (currentProduct.price > highestPrice) {
+//     highestPrice = currentProduct.price;
+//     highestPricedProduct = currentProduct; // Update the product itself
+//   }
 
-  // Check if the current product's price is lower than our lowest so far
-  if (currentProduct.price < lowestPrice) {
-    lowestPrice = currentProduct.price;
-    lowestPricedProduct = currentProduct; // Update the product itself
+//   // Check if the current product's price is lower than our lowest so far
+//   if (currentProduct.price < lowestPrice) {
+//     lowestPrice = currentProduct.price;
+//     lowestPricedProduct = currentProduct; // Update the product itself
+//   }
+// }
+
+
+// console.log("Highest priced item:", highestPricedProduct.name, "at $" + highestPrice);
+// console.log("Lowest priced item:", lowestPricedProduct.name, "at $" + lowestPrice);
+
+
+let prices = [88, 95, 72, 100, 85];
+let temp; // A temporary variable to help us swap values
+
+// Outer loop: Controls how many passes we make through the array
+for (let i = 0; i < prices.length; i++) {
+
+    // Inner loop: Does the comparing and swapping on each pass
+for (let j = 0; j < prices.length - 1; j++) {
+
+   // Compare the item at j with the item at j+1
+    if (prices[j] < prices[j + 1]) {
+        // If the item on the right is bigger, swap them
+
+// store  the left item in the temp 
+ temp = prices[j];
+
+prices[j] = prices[j + 1];
+
+    }
   }
 }
 
+console.log("prices:", prices);
 
-console.log("Highest priced item:", highestPricedProduct.name, "at $" + highestPrice);
-console.log("Lowest priced item:", lowestPricedProduct.name, "at $" + lowestPrice);
 
+// sort method (descending order)
+let prices = [88, 95, 72, 100, 85];
+
+// To sort in descending order, you provide a "compare function"
+prices.sort((a, b) => b - a);
+
+console.log("Sorted array (descending):", prices);
+
+
+// finding values
+let x = [20, 50, 70, 200];
+let y = 40;
+let z = 100;
+
+
+// The filter method takes the first item, 20, and passes it to the function as the value parameter.
+// function checks the condition: return 20 > 40 && 20 < 100;
+// Is 20 > 40? False.
+let result = x.filter(function(value) {
+    //  function(value) { ... } is the test that filter runs for each item.
+
+    return value > y && value < z;
+
+    // Since the first part of the && is false, the whole expression is false. The function returns false.
+});
+
+console.log(result);
+
+// descending order
+// let prices = [88, 95, 72, 100, 85];
+// let  temp
+
+// // inner loop 
+// for (let i = 0; i < prices.length; i++) {
+
+//     // first finding the bigger price 
+//     // we assume the bigger price is the first one
+//     let maxPrice = prices[i];
+//     for (let j = i + 1; j < prices.length; j++) {
+//         if (prices[j] > maxPrice) {
+//             maxPrice = prices[j];
+//         }
+//     }
+//     console.log("Bigger price found:", maxPrice);
+// }
